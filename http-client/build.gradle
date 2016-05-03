@@ -38,7 +38,7 @@ dependencies {
 	testCompile "org.codehaus.groovy:groovy-all:2.4.6"
 	testCompile "org.spockframework:spock-core:$spockVersion"
 	testCompile "junit:junit:4.12"
-	testCompile "io.codearte.accurest:stub-runner-spring:${accurestVersion}"
+	testCompile "io.codearte.accurest:stub-runner-spring:${findProperty('accurestVersion') ?: accurestVersion}"
 }
 
 test {
