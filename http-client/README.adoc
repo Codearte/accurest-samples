@@ -13,6 +13,12 @@ Run
 ./gradlew clean build
 --------
 
+or
+
+--------
+./mvnw clean package
+--------
+
 To
 
 - build the app

@@ -7,6 +7,12 @@ Run
 ./gradlew clean build publishToMavenLocal
 --------
 
+or
+
+--------
+./mvnw clean install
+--------
+
 To
 
 - build the app
