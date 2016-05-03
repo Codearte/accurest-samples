@@ -18,4 +18,8 @@
         <module>http-client</module>
     </modules>
 
+    <properties>
+        <maven.install.skip>true</maven.install.skip>
+    </properties>
+
 </project>
