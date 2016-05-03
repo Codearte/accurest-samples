@@ -1,0 +1,7 @@
+= Accurest Samples
+
+Projects that contain different samples of Accurest.
+
+include::accurest-gradle-http-server/README.adoc[]
+
+include::accurest-gradle-http-client/README.adoc[]

@@ -1,0 +1,3 @@
+stubrunner:
+  work-offline: true
+  stubs.ids: 'io.codearte.accurest.testprojects:accurest-gradle-http-server:+:stubs:8080'

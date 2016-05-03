@@ -1,0 +1,14 @@
+= Accurest Gradle Http Server
+
+Run
+
+[source=groovy]
+--------
+./gradlew clean build publishToMavenLocal
+--------
+
+To
+
+- build the app
+- generate Accurest tests
+- publish the fatJar and the stubs to Maven Local

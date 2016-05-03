@@ -1,0 +1,20 @@
+= Accurest Gradle Http Client
+
+== Prerequisites
+
+First you have to publish to Maven Local the stubs of https://github.com/marcingrzejszczak/accurest-gradle-http-server[Accurest Gradle Http Server]
+
+== How to run it?
+
+Run
+
+[source=groovy]
+--------
+./gradlew clean build
+--------
+
+To
+
+- build the app
+- use http://codearte.github.io/accurest/#stub-runner-spring[Stub Runner Spring] to download the stub of `Accurest Gradle Http Server`
+- run the tests
