@@ -92,7 +92,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <contractsDirectory>src/test/resources/accurest</contractsDirectory>
                     <baseClassForTests>com.toomuchcoding.MvcTest</baseClassForTests>
                 </configuration>
                 <!-- required only for testing purpose -->
