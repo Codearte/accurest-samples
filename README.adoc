@@ -2,6 +2,6 @@
 
 Projects that contain different samples of Accurest.
 
-include::accurest-gradle-http-server/README.adoc[]
+include::http-server/README.adoc[]
 
-include::accurest-gradle-http-client/README.adoc[]
+include::http-client/README.adoc[]

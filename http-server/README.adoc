@@ -1,4 +1,4 @@
-= Accurest Gradle Http Server
+= Http Server
 
 Run
 
