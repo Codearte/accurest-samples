@@ -11,13 +11,12 @@ buildscript {
 group = 'io.codearte.accurest.testprojects'
 version = '0.0.1-SNAPSHOT'
 
-apply plugin: 'groovy'
-
 repositories {
 	mavenCentral()
 	mavenLocal()
 }
 
+apply plugin: 'groovy'
 apply plugin: 'spring-boot'
 apply plugin: 'maven-publish'
 
