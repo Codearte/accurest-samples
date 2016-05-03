@@ -6,7 +6,13 @@ LOCAL_MAVEN_REPO=${LOCAL_MAVEN_REPO-~/.m2}
 ACCUREST_VERSION=${ACCUREST_VERSION:-1.1.0-M4}
 ROOT=`pwd`
 
-echo -e "Clearing saved stubs"
+cat <<EOF
+Running tests with the following parameters
+LOCAL_MAVEN_REPO=${LOCAL_MAVEN_REPO}
+ACCUREST_VERSION=${ACCUREST_VERSION}
+EOF
+
+echo -e "\n\nClearing saved stubs"
 rm -rf $LOCAL_MAVEN_REPO/repository/io/codearte/accurest/testprojects/
 
 echo -e "\n\nRunning tests for Gradle\n\n"
