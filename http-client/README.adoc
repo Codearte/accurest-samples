@@ -23,4 +23,4 @@ To
 
 - build the app
 - use http://codearte.github.io/accurest/#stub-runner-spring[Stub Runner Spring] to download the stub of `Http Server`
-- run the tests
+- run the tests against stubbed server
