@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <accurest.version>1.1.0-M4</accurest.version>
+        <accurest.version>1.1.0-M5</accurest.version>
     </properties>
 
     <dependencies>
@@ -56,13 +56,13 @@
         <dependency>
             <groupId>com.toomuchcoding.jsonassert</groupId>
             <artifactId>jsonassert</artifactId>
-            <version>0.4.1</version>
+            <version>0.4.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>2.4.0</version>
+            <version>3.4.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -76,20 +76,12 @@
             <plugin>
                 <groupId>io.codearte.accurest</groupId>
                 <artifactId>accurest-maven-plugin</artifactId>
-                <version>0.6.6</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>convert</goal>
-                            <goal>generateStubs</goal>
-                            <goal>generateTests</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>0.6.7</version>
+                <extensions>true</extensions>
                 <configuration>
                     <baseClassForTests>com.toomuchcoding.MvcTest</baseClassForTests>
                 </configuration>
-                <!-- required only for testing purpose -->
+                <!-- this was added for testing purposes only-->
                 <dependencies>
                     <dependency>
                         <groupId>io.codearte.accurest</groupId>
