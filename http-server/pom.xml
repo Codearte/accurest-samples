@@ -76,7 +76,7 @@
             <plugin>
                 <groupId>io.codearte.accurest</groupId>
                 <artifactId>accurest-maven-plugin</artifactId>
-                <version>0.6.7</version>
+                <version>0.6.8</version>
                 <extensions>true</extensions>
                 <configuration>
                     <baseClassForTests>com.toomuchcoding.MvcTest</baseClassForTests>
