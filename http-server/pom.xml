@@ -10,14 +10,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.3.RELEASE</version>
+        <version>1.3.5.RELEASE</version>
         <relativePath/>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <accurest.version>1.1.0-M7</accurest.version>
+        <accurest.version>1.1.0-M8</accurest.version>
     </properties>
 
     <dependencies>
@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.toomuchcoding.jsonassert</groupId>
             <artifactId>jsonassert</artifactId>
-            <version>0.4.5</version>
+            <version>0.4.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>

@@ -4,7 +4,7 @@ buildscript {
 		mavenLocal()
 	}
 	dependencies {
-		classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE"
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE"
 		classpath "io.codearte.accurest:accurest-gradle-plugin:${findProperty('accurestVersion') ?: accurestVersion}"
 	}
 }
@@ -30,7 +30,6 @@ ext {
 accurest {
 	targetFramework = 'Spock'
 	baseClassForTests = 'com.toomuchcoding.MvcSpec'
-	contractsDslDir = file("src/test/resources/accurest")
 	stubsOutputDir = wireMockStubsOutputDir
 }
 
