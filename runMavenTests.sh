@@ -13,7 +13,7 @@ ACCUREST_VERSION=${ACCUREST_VERSION}
 EOF
 
 echo -e "\n\nClearing saved stubs"
-rm -rf $LOCAL_MAVEN_REPO/repository/io/codearte/accurest/testprojects/
+rm -rf $LOCAL_MAVEN_REPO/repository/org/springframework/cloud/contract/testprojects/
 
 echo -e "\n\nRunning tests for Maven\n\n"
 echo -e "Building server (uses Accurest Maven Plugin)"

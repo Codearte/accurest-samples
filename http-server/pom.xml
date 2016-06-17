@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.codearte.accurest.testprojects</groupId>
+    <groupId>org.springframework.cloud.contract.testprojects</groupId>
     <artifactId>http-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <accurest.version>1.1.0-M8</accurest.version>
+        <spring-cloud-contract-verifier.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-contract-verifier.version>
     </properties>
 
     <dependencies>
@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.toomuchcoding.jsonassert</groupId>
             <artifactId>jsonassert</artifactId>
-            <version>0.4.6</version>
+            <version>0.4.7</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -74,8 +74,8 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>io.codearte.accurest</groupId>
-                <artifactId>accurest-maven-plugin</artifactId>
+                <groupId>org.springframework.cloud.contract</groupId>
+                <artifactId>spring-cloud-contract-verifier-maven-plugin</artifactId>
                 <version>0.6.9</version>
                 <extensions>true</extensions>
                 <configuration>
@@ -84,9 +84,9 @@
                 <!-- this was added for testing purposes only-->
                 <dependencies>
                     <dependency>
-                        <groupId>io.codearte.accurest</groupId>
-                        <artifactId>accurest-core</artifactId>
-                        <version>${accurest.version}</version>
+                        <groupId>org.springframework.cloud.contract</groupId>
+                        <artifactId>spring-cloud-contract-verifier-core</artifactId>
+                        <version>${spring-cloud-contract-verifier.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>

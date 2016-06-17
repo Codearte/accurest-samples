@@ -8,7 +8,7 @@ buildscript {
 	}
 }
 
-group = 'io.codearte.accurest.testprojects'
+group = 'org.springframework.cloud.contract.testprojects'
 version = '0.0.1-SNAPSHOT'
 
 repositories {
@@ -31,7 +31,7 @@ dependencies {
 	testCompile "org.springframework:spring-test"
 	testCompile "org.spockframework:spock-core"
 	testCompile "junit:junit"
-	testCompile "io.codearte.accurest:stub-runner-spring:${findProperty('accurestVersion') ?: accurestVersion}"
+	testCompile "org.springframework.cloud.contract:spring-cloud-contract-stub-runner-spring:${findProperty('verifierVersion') ?: verifierVersion}"
 }
 
 test {
@@ -41,5 +41,5 @@ test {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.13'
+    gradleVersion = '2.14'
 }

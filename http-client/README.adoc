@@ -22,5 +22,5 @@ or
 To
 
 - build the app
-- use http://codearte.github.io/accurest/#stub-runner-spring[Stub Runner Spring] to download the stub of `Http Server`
+- use spring-cloud-contract-stub-runner-spring[Stub Runner Spring] to download the stub of `Http Server`
 - run the tests against stubbed server
