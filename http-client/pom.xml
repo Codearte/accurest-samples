@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <accurest.version>1.1.0-M8</accurest.version>
+        <spring-cloud-contract-verifier.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-contract-verifier.version>
     </properties>
 
     <dependencies>
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>org.springframework.cloud.contract</groupId>
             <artifactId>spring-cloud-contract-stub-runner-spring</artifactId>
-            <version>${accurest.version}</version>
+            <version>${spring-cloud-contract-verifier.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
