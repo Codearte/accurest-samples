@@ -16,5 +16,5 @@ or
 To
 
 - build the app
-- generate and run Accurest tests
+- generate and run Spring Cloud Contract Verifier tests
 - publish the fatJar and the stubs to Maven Local

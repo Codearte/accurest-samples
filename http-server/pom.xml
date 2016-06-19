@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.codearte.accurest.testprojects</groupId>
+    <groupId>org.springframework.cloud.contract.testprojects</groupId>
     <artifactId>http-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -17,7 +17,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <accurest.version>1.1.0-M8</accurest.version>
+        <spring-cloud-contract-verifier.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-contract-verifier.version>
+        <spring-cloud-contract-verifier-maven-plugin.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-contract-verifier-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -56,7 +57,7 @@
         <dependency>
             <groupId>com.toomuchcoding.jsonassert</groupId>
             <artifactId>jsonassert</artifactId>
-            <version>0.4.6</version>
+            <version>0.4.7</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -74,23 +75,91 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>io.codearte.accurest</groupId>
-                <artifactId>accurest-maven-plugin</artifactId>
-                <version>0.6.9</version>
+                <groupId>org.springframework.cloud.contract</groupId>
+                <artifactId>spring-cloud-contract-verifier-maven-plugin</artifactId>
+                <version>${spring-cloud-contract-verifier-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <baseClassForTests>com.toomuchcoding.MvcTest</baseClassForTests>
+                    <baseClassForTests>org.springframework.cloud.MvcTest</baseClassForTests>
                 </configuration>
                 <!-- this was added for testing purposes only-->
                 <dependencies>
                     <dependency>
-                        <groupId>io.codearte.accurest</groupId>
-                        <artifactId>accurest-core</artifactId>
-                        <version>${accurest.version}</version>
+                        <groupId>org.springframework.cloud.contract</groupId>
+                        <artifactId>spring-cloud-contract-verifier-core</artifactId>
+                        <version>${spring-cloud-contract-verifier.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>spring</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>spring-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>http://repo.spring.io/libs-snapshot-local</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>spring-milestones</id>
+                    <name>Spring Milestones</name>
+                    <url>http://repo.spring.io/libs-milestone-local</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>spring-releases</id>
+                    <name>Spring Releases</name>
+                    <url>http://repo.spring.io/release</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>spring-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>http://repo.spring.io/libs-snapshot-local</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>spring-milestones</id>
+                    <name>Spring Milestones</name>
+                    <url>http://repo.spring.io/libs-milestone-local</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>spring-plugin-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>http://repo.spring.io/plugins-snapshot-local</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>spring-plugin-milestones</id>
+                    <name>Spring Milestones</name>
+                    <url>http://repo.spring.io/plugins-milestone-local</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
 </project>
