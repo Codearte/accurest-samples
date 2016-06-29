@@ -30,15 +30,10 @@ apply plugin: 'spring-boot'
 apply plugin: 'contract-verifier'
 apply plugin: 'maven-publish'
 
-ext {
-	stubsOutputDirRoot = file("${project.buildDir}/production/${project.name}-stubs/")
-	wireMockStubsOutputDir = file(new File(stubsOutputDirRoot, 'mappings/'))
-}
 
 contractVerifier {
 	targetFramework = 'Spock'
 	baseClassForTests = 'com.toomuchcoding.MvcSpec'
-	stubsOutputDir = wireMockStubsOutputDir
 }
 
 dependencies {
@@ -53,25 +48,6 @@ dependencies {
 	testCompile "org.springframework:spring-test"
 	testCompile "com.jayway.restassured:spring-mock-mvc:2.9.0"
 	testCompile "junit:junit"
-}
-
-task stubsJar(type: Jar, dependsOn: "generateWireMockClientStubs") {
-	baseName = "${project.name}"
-	classifier = "stubs"
-	from stubsOutputDirRoot
-}
-
-artifacts {
-	archives stubsJar
-}
-
-publishing {
-	publications {
-		stubs(MavenPublication) {
-			artifactId "${project.name}"
-			artifact stubsJar
-		}
-	}
 }
 
 test {
