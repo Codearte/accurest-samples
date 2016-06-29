@@ -16,6 +16,8 @@
     <modules>
         <module>http-server</module>
         <module>http-client</module>
+        <module>contract-verifier-sample-stream-sink</module>
+        <module>contract-verifier-sample-stream-source</module>
     </modules>
 
     <properties>

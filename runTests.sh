@@ -15,12 +15,25 @@ EOF
 echo -e "\n\nClearing saved stubs"
 rm -rf $LOCAL_MAVEN_REPO/repository/org/springframework/cloud/contract/testprojects/
 
-echo -e "\n\nRunning tests for Gradle\n\n"
+echo -e "\n\nRunning tests for Gradle (HTTP communication)\n\n"
 echo -e "Building server (uses Spring Cloud Contract Verifier Gradle Plugin)"
 cd http-server
-./gradlew clean build publishToMavenLocal -PverifierVersion=${VERIFIER_VERSION}
+./gradlew clean build publishToMavenLocal -PverifierVersion=${VERIFIER_VERSION} --stacktrace
 cd $ROOT
 echo -e "\n\nBuilding client (uses Spring Cloud Contract Stub Runner)"
 cd http-client
-./gradlew clean build -PverifierVersion=${VERIFIER_VERSION}
+./gradlew clean build -PverifierVersion=${VERIFIER_VERSION} --stacktrace
+cd $ROOT
+
+echo -e "\n\nClearing saved stubs"
+rm -rf $LOCAL_MAVEN_REPO/repository/org/springframework/cloud/contract/testprojects/
+
+echo -e "\n\nRunning tests for Gradle (communication via messaging)\n\n"
+echo -e "Building producer (uses Spring Cloud Contract Verifier Gradle Plugin)"
+cd contract-verifier-sample-stream-source
+./gradlew clean build publishToMavenLocal -PverifierVersion=${VERIFIER_VERSION} --stacktrace
+cd $ROOT
+echo -e "\n\nBuilding consumer (uses Spring Cloud Contract Stub Runner Messaging)"
+cd contract-verifier-sample-stream-sink
+./gradlew clean build -PverifierVersion=${VERIFIER_VERSION} --stacktrace
 cd $ROOT

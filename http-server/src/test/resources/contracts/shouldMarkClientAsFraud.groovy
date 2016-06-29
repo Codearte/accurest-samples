@@ -1,6 +1,6 @@
 package contracts
 
-org.springframework.cloud.contract.verifier.dsl.Contract.make {
+org.springframework.cloud.contract.spec.Contract.make {
 				request {
 				method """PUT"""
 				url """/fraudcheck"""
