@@ -1,4 +1,4 @@
-package com.toomuchcoding
+package org.springframework.cloud
 
 import org.springframework.cloud.contract.frauddetection.FraudDetectionController
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc
